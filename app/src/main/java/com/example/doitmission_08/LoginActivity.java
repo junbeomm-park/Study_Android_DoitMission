@@ -36,11 +36,13 @@ public class LoginActivity extends AppCompatActivity {
                 Intent intent = new Intent(LoginActivity.this, MainMenuActivity.class);
                 intent.putExtra("id","");
                 intent.putExtra("pass","");
-                startActivityForResult(intent,INPUT_DATA_MAINMENU);
-
-                if(id.getText()==null || pass.getText()==null){
-                    Toast.makeText(this,"ID 또는 비밀번호를 입력하세요 ",Toast.LENGTH_LONG).show();
+                if(id.getText().toString().equals("") || pass.getText().toString().equals("")){
+                     Toast.makeText(LoginActivity.this,"ID 또는 비밀번호를 입력하세요 ",Toast.LENGTH_LONG).show();
+                }else {
+                    startActivityForResult(intent, INPUT_DATA_MAINMENU);
                 }
+
+
 
             }
         });

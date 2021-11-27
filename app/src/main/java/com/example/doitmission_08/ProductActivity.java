@@ -27,7 +27,7 @@ public class ProductActivity extends AppCompatActivity {
                 intent.putExtra("product", "액티비티에서 실행 ");
                 setResult(RESULT_OK, intent);
                 finish();
-                Intent intent = new Intent(ProductActivity.this, MainMenuActivity.class);
+
                 /*startActivityForResult(intent,INPUT_DATA_PRODUCT);*/   // 연결되는 메소드인데 왜 주석처리해도 연결?????
                                                                          // setResult 가 연결 ????
             }
